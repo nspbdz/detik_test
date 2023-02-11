@@ -29,7 +29,7 @@ function generateTicket($id, $qty)
         $stmt->bind_param("ssds", $code, $status, $id, $price);
 
         for ($i = 1; $i < $qty; $i++) {
-            $code = "DTK" . substr(md5(rand()), 0, 6);
+            $code = "DTK" . substr(md5(rand()), 0, 7);
             $status = "available";
             $price = rand(10, 100) . "." . rand(0, 99);
 

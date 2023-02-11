@@ -13,7 +13,7 @@ function ticketSeeder()
             try {
                 for ($i = 1; $i < $count; $i++) {
                     $event_id =mt_rand(1, 4); // Assuming events have already been inserted
-                    $code = "DTK" . substr(md5(rand()), 0, 6);
+                    $code = "DTK" . substr(md5(rand()), 0, 7);
                     $status = "available";
                     $price = rand(10, 100) . "." . rand(0, 99);
                 
