@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "b77b3eb7-4581-48b3-93cf-4ccc5a7a22d4",
+		"name": "detikcom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25098941"
+	},
+	"item": [
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "update ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "event_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "ticket_code",
+									"value": "DTK08f4e1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "claimed",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/crud-php/app/routes/api.php?function=updateTicket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"crud-php",
+								"app",
+								"routes",
+								"api.php"
+							],
+							"query": [
+								{
+									"key": "function",
+									"value": "updateTicket"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "event_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "ticket_code",
+									"value": "DTK08f4e1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/crud-php/app/routes/api.php?function=checkTicket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"crud-php",
+								"app",
+								"routes",
+								"api.php"
+							],
+							"query": [
+								{
+									"key": "function",
+									"value": "checkTicket"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
