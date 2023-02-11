@@ -5,28 +5,23 @@ if (php_sapi_name() !== 'cli') {
     exit;
 }
 
-// 
-// include '../app/database/migrations/migrate.php';
-
 
 function generateTicket($id, $qty)
 {
-
     
-
     // menggunakan Prepared Statements dan Transaksi:
 
     include '../app/database/config/database.php';
     try {
 
-        //optimasi transaction jadi dijalankan sekaligus atau tidak dijalankan sama sekali
-        //begin_transaction  memulai transaksi pada permulaan statement
-        $conn->begin_transaction();
-
-        // optimasi menggunakan prepared statement untuk mencegah sql injection
+          // optimasi menggunakan prepared statement untuk mencegah sql injection
         // Argumen "ssds" mencantumkan jenis data yang menjadi parameternya.
         // s string d double 
         // bind parameter yang dikirim oleh variable akan dibaca hanya sebagai parameter, tidak dibaca sebagai query yang akan dieksekusi oleh server.
+
+        //optimasi transaction jadi dijalankan sekaligus atau tidak dijalankan sama sekali
+        //begin_transaction  memulai transaksi pada permulaan statement
+        $conn->begin_transaction();
 
         // preparing statements 
         $stmt = $conn->prepare("INSERT INTO tickets (ticket_code, status, event_id, price) VALUES (?, ?, ?, ?)");
