@@ -40,7 +40,10 @@
     event_id:3
     ticket_code:DTK08f4e1
 
-notes* jika gagal dalam migration bisa gunakan detik_test.sql
+notes*
+-jika gagal dalam migration bisa gunakan detik_test.sql
 yang ada di dalam folder db sql
 import ke database file sql tersebut
 
+- pastikan php version sama agar tidak terjadi error
+  php versi ini PHP 7.4.29
