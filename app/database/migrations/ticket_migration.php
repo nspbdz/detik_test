@@ -29,5 +29,3 @@ function migrateTickets()
     }
 }
 
-
-// Note: It's important to also secure the database connection and prevent SQL injection attacks. This can be done by using prepared statements or parameterized queries.

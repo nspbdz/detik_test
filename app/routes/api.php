@@ -1,5 +1,4 @@
 <?php 
-// require_once "../database/config/database.php";
 
 require_once "../controllers/TicketController.php";
 
